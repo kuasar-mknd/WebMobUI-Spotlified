@@ -1,2 +1,34 @@
 /* Packages */
 @import 'npm:normalize.css';
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+header {
+  height: 100px;
+  background-color: #ff000044;
+}
+main {
+  background-color: #00ff0044;
+  flex-grow: 1;
+}
+footer {
+  height: 100px;
+  background-color: #0000ff44;
+}
+
+nav {
+  display: flex;
+  height: 80px;
+}
+
+nav a {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #00ff00f6;
+}
