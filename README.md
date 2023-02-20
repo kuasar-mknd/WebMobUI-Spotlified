@@ -1,16 +1,16 @@
 # WebMobUI Spotlified
 
-# Concept Spotify version simplifiée
+## Concept Spotify version simplifiée
 
-## 3 modèles :
+### 3 modèles :
 - Chansons
 - Artistes
 - Favoris
 
-# Prototype
+### Prototype
 [yalk322536.invisionapp.com](https://yalk322536.invisionapp.com/console/share/AFRXSE96TUD)
 
-# ArchitectureProjet
+### ArchitectureProjet
 - API JSON
 - Serveur
 - HTML
@@ -18,7 +18,7 @@
 - JS
 - Application locale
 
-# Features
+### Features
 - Homepage
 - Liste des artistes
 - Liste des chansons par artiste
@@ -30,7 +30,7 @@
 - Caching
 - Installation de l’application
 
-# Composants
+### Composants
 - Projet Parcel vide
 - Squelette HTML
 - Styles CSS structurels
