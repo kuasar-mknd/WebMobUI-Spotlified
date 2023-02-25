@@ -1,4 +1,4 @@
-# WebMobUI Spotlified
+# WebMobUI Spotlified HEIG-VD COMEM 2023
 
 # Concept Spotify version simplifiée
 
