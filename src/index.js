@@ -1,4 +1,4 @@
-import {getArtist, getArtists, getSongsForArtist} from './api'
+import {getArtists, getSongsForArtist} from './api'
 
 const afficherSection = async (hash) => {
     if (hash == '') hash = '#home'
@@ -24,12 +24,16 @@ const afficherSection = async (hash) => {
                 list.replaceChildren()
 
                 //récupérer l'artiste
-                const artist = await getArtist(hash[1])
+                //const artist = await getArtist(hash[1])
+
+                const artist = document.querySelector(`#artists-${hash[1]}`)
+                const artistNameContent = artist.querySelector('.artist-list-item-title').innerText
+
 
                 //ajouter le nom de l'artiste et du lien vers la liste des artistes
                 const artistName = document.querySelector('#element-vide-a-copier-artistName').content.cloneNode(true)
                 artistName.querySelector('a').href = `#artists`
-                artistName.querySelector('a').after(artist.name)
+                artistName.querySelector('a').after(artistNameContent)
                 list.append(artistName)
 
                 // charger les chansons de l'artiste
@@ -63,6 +67,7 @@ const afficherSection = async (hash) => {
 
                     //ajout hash pour chaque artiste
                     lacopieARemplir.querySelector('a').href = `#artists-${artiste.id}`
+                    lacopieARemplir.querySelector('a').id = `artists-${artiste.id}`
 
                     list.append(lacopieARemplir)
                 })
