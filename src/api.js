@@ -24,9 +24,5 @@ async function searchSongs(query) {
   return await loadJson(`${BASE_URL}/api/songs/search/${encodeURIComponent(query)}`)
 }
 
-// Retourne un artiste
-async function getArtist(id) {
-    return await loadJson(`${BASE_URL}/api/artists/${id}`)
-}
 
-export { getArtists, getSongsForArtist, searchSongs, getArtist }
+export { getArtists, getSongsForArtist, searchSongs }
