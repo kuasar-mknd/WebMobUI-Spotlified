@@ -46,8 +46,8 @@
         <h1 class="hero">Bienvenue</h1>
         <h4>Playlists</h4>
         <div class="button-list">
-          <a href="#">Vers les favoris</a>
-          <a href="#">Vers les artistes</a>
+          <a href="#favoris">Vers les favoris</a>
+          <a href="#artists">Vers les artistes</a>
         </div>
       </section>
 
@@ -114,41 +114,51 @@
         <h4>Artistes</h4>
 
         <div class="artist-list">
-          <a href="#">
-            <img src="http://placekitten.com/200/300" />
-            <div class="artist-list-item-title">Dynoro</div>
-          </a>
+
+        </div>
+
+        <template id="element-vide-a-copier">
           <a href="#">
             <img src="http://placekitten.com/200/300" />
             <div class="artist-list-item-title">Kungs</div>
           </a>
-        </div>
+        </template>
       </section>
 
       <!------------------------------------------------------------------------------------------------------------>
 
       <section id="list-section">
+        <template id="element-vide-a-copier-artistName">
         <h4>
-          Artistes > Kungs
+          <a href="#">Artistes</a>
           <!-- Exemple avec un bouton au bout du titre. Pour l'ajout de playlists, par exemple -->
           <button type="button" class="icon-button align-right">
             <span class="material-icons">add</span>
           </button>
         </h4>
-
-        <ul class="list">
-          <!-- Exemple avec un lien et un chevron (par exemple dans la liste de playlists, le lien qui mène à son contenu-->
+        </template>
+        <template id="element-vide-a-copier-listSong">
           <li>
             <a href="#">
               <div class="list-item-title">Never going home</div>
               <div class="list-item-actions">
                 <span class="material-icons">chevron_right</span>
+                <button type="button" class="icon-button">
+                  <span class="material-icons">playlist_add</span>
+                </button>
+                <button type="button" class="icon-button">
+                  <span class="material-icons">play_arrow</span>
               </div>
             </a>
           </li>
+        </template>
+
+        <ul class="list">
+          <!-- Exemple avec un lien et un chevron (par exemple dans la liste de playlists, le lien qui mène à son contenu-->
+
 
           <!-- Exemple sans lien -->
-          <li>
+          <!--<li>
             <div class="list-item-title">Never going home</div>
             <div class="list-item-actions">
               <button type="button" class="icon-button">
@@ -202,7 +212,7 @@
                 <span class="material-icons">play_arrow</span>
               </button>
             </div>
-          </li>
+          </li>-->
         </ul>
       </section>
 
@@ -212,6 +222,7 @@
         <h4>Never going home</h4>
         <h5>Kungs</h5>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis quis elit maximus, consequat velit vitae, laoreet felis. Morbi commodo vitae dolor nec scelerisque. Maecenas non urna orci.</p>
+      </section>
 
       <!------------------------------------------------------------------------------------------------------------>
     </main>
