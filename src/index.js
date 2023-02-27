@@ -23,13 +23,9 @@ const afficherSection = async (hash) => {
                 const list = document.querySelector('.list')
                 list.replaceChildren()
 
-                //récupérer l'artiste
-                //const artist = await getArtist(hash[1])
-
                 const artist = document.querySelector(`#artists-${hash[1]}`)
                 const artistNameContent = artist.querySelector('.artist-list-item-title').innerText
-
-
+                
                 //ajouter le nom de l'artiste et du lien vers la liste des artistes
                 const artistName = document.querySelector('#element-vide-a-copier-artistName').content.cloneNode(true)
                 artistName.querySelector('a').href = `#artists`
