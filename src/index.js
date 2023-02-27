@@ -23,25 +23,19 @@ const afficherSection = async (hash) => {
                 const list = document.querySelector('.list')
                 list.replaceChildren()
 
-              //récupérer l'artiste
+                //récupérer l'artiste
                 const artist = await getArtist(hash[1])
 
-              //ajouter le nom de l'artiste et du lien vers la liste des artistes
+                //ajouter le nom de l'artiste et du lien vers la liste des artistes
                 const artistName = document.querySelector('#element-vide-a-copier-artistName').content.cloneNode(true)
-                console.log(artistName)
                 artistName.querySelector('a').href = `#artists`
-                artistName.querySelector('a').innerHTML = "Artistes > "
-                console.log(artist.name)
                 artistName.querySelector('a').after(artist.name)
-                console.log(artistName)
                 list.append(artistName)
 
-              // charger les chansons de l'artiste
+                // charger les chansons de l'artiste
                 const artistSongs = await getSongsForArtist(hash[1])
-                console.log(artistSongs)
 
                 const elementVideAcopier = document.querySelector('#element-vide-a-copier-listSong')
-
 
                 artistSongs.forEach((song) => {
                     const lacopieARemplir = elementVideAcopier.content.cloneNode(true)
@@ -52,10 +46,7 @@ const afficherSection = async (hash) => {
                 hash = '#list'
 
             } else {
-                // vider la liste
-                // list.replaceChildren()
 
-                // charger artistes depuis api
                 const artists = await getArtists()
 
                 const elementVideAcopier = document.querySelector('#element-vide-a-copier')
