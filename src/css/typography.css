@@ -9,8 +9,6 @@ h1 {
   font-size: 4rem;
 }
 
-
-
 h1.hero {
   font-size: 4.5rem;
   font-weight: 100;
@@ -34,15 +32,6 @@ h3 {
 
 h4 {
   font-size: 2.5rem;
-}
-
-/* pour element a dans un h4 */
-h4 a {
-  font-size: 2.5rem;
-  /* on rétablit la couleur par défaut */
-    color: var(--text-color);
-  /* on enlève le soulignement par défaut */
-    text-decoration: none;
 }
 
 h5 {
